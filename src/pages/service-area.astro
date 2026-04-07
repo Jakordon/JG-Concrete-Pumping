@@ -1,0 +1,454 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const dfwAreas = [
+  'Dallas', 'Fort Worth', 'Irving', 'Arlington', 'Garland', 'Mesquite',
+  'Grand Prairie', 'McKinney', 'Frisco', 'Plano', 'Richardson', 'Allen',
+  'Denton', 'Lewisville', 'Carrollton', 'Farmers Branch', 'Rockwall', 'Rowlett',
+];
+
+const tylerAreas = [
+  'Tyler', 'Longview', 'Lindale', 'Flint', 'Whitehouse', 'Bullard',
+  'Mineola', 'Canton', 'Terrell', 'Forney', 'Kaufman',
+];
+---
+
+<Layout
+  title="Service Area"
+  description="Gordon Concrete Pumping serves the Dallas–Fort Worth Metroplex and Tyler/East Texas via the I-20 corridor. Residential and commercial concrete pumping across North Texas."
+>
+
+  <div class="page-hero">
+    <div class="container">
+      <span class="section-label">Where We Work</span>
+      <h1>Service Area</h1>
+      <p>We cover the Dallas–Tyler Corridor — the I-20 corridor connecting the DFW Metroplex to Tyler and East Texas.</p>
+    </div>
+  </div>
+
+  <!-- Corridor Overview -->
+  <section class="section section--alt">
+    <div class="container">
+      <div class="corridor-block">
+        <div class="corridor-text">
+          <span class="section-label">Our Territory</span>
+          <h2>The Dallas–Tyler Corridor</h2>
+          <p>
+            Our base sits along the I-20 corridor, giving us efficient access to both of Texas's strongest
+            construction sub-markets: the DFW Metroplex to the west, and the rapidly growing Tyler/East Texas
+            region to the east.
+          </p>
+          <p>
+            The DFW Metroplex ranks <strong>#2 in the United States</strong> for new home builder permit volume
+            and <strong>#1 nationally</strong> for industrial permit activity. Tyler and East Texas offer a
+            less saturated market with strong regional builder relationships and fewer competing boom pump operators.
+          </p>
+          <p>
+            Together, these two markets give Gordon Concrete Pumping access to one of the most active
+            construction corridors in the country.
+          </p>
+        </div>
+        <div class="corridor-visual">
+          <div class="corridor-map">
+            <div class="corridor-node dfw">
+              <div class="node-dot"></div>
+              <div class="node-label">
+                <strong>DFW Metroplex</strong>
+                <span>#2 US permit volume</span>
+              </div>
+            </div>
+            <div class="corridor-highway">
+              <span>I-20 East</span>
+              <span class="corridor-dist">~100 miles</span>
+            </div>
+            <div class="corridor-node tyler">
+              <div class="node-dot"></div>
+              <div class="node-label">
+                <strong>Tyler / East TX</strong>
+                <span>Less competition, more loyalty</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sub-Market Detail -->
+  <section class="section">
+    <div class="container">
+      <div class="grid-2">
+        <div class="market-card">
+          <div class="market-card-header market-card-header--dfw">
+            <h3>Dallas–Fort Worth Metroplex</h3>
+            <span class="market-badge">Primary Market</span>
+          </div>
+          <div class="market-card-body">
+            <p>
+              The DFW Metroplex is the core of our service territory. With the highest construction
+              activity in the state and a booming commercial/industrial sector, it provides the
+              volume needed to fill a consistent job calendar.
+            </p>
+            <div class="market-stats">
+              <div class="mkt-stat">
+                <span class="mkt-stat-value">#2</span>
+                <span class="mkt-stat-label">US New Home Permit Volume</span>
+              </div>
+              <div class="mkt-stat">
+                <span class="mkt-stat-value">#1</span>
+                <span class="mkt-stat-label">TX Industrial Permits (~1/3 of TX commercial sq ft)</span>
+              </div>
+            </div>
+            <h4>Construction Activity</h4>
+            <ul class="area-feature-list">
+              <li>Data centres, semiconductor fabs — booming industrial demand</li>
+              <li>Warehouse and logistics infrastructure</li>
+              <li>Residential still top-2 nationally</li>
+              <li>Multi-unit and townhouse developments</li>
+              <li>Commercial tilt-panel and office construction</li>
+            </ul>
+            <h4 style="margin-top:1.25rem">Areas Served</h4>
+            <div class="areas-grid">
+              {dfwAreas.map(area => <span class="area-tag">{area}</span>)}
+            </div>
+          </div>
+        </div>
+
+        <div class="market-card">
+          <div class="market-card-header market-card-header--tyler">
+            <h3>Tyler & East Texas</h3>
+            <span class="market-badge">Secondary Market</span>
+          </div>
+          <div class="market-card-body">
+            <p>
+              Tyler and East Texas represent a genuine opportunity for relationship-first owner-operators.
+              Far fewer boom pump operators are based here, and contractors who find a reliable operator
+              tend to remain loyal customers.
+            </p>
+            <div class="market-stats">
+              <div class="mkt-stat">
+                <span class="mkt-stat-value">Fewer</span>
+                <span class="mkt-stat-label">Competing boom pump operators locally</span>
+              </div>
+              <div class="mkt-stat">
+                <span class="mkt-stat-value">Loyal</span>
+                <span class="mkt-stat-label">Builder relationships available early</span>
+              </div>
+            </div>
+            <h4>Construction Activity</h4>
+            <ul class="area-feature-list">
+              <li>Strong regional residential builder base</li>
+              <li>Growing commercial and light industrial</li>
+              <li>Less price competition than DFW</li>
+              <li>First-mover advantage available</li>
+            </ul>
+            <div class="tyler-note">
+              <strong>Scheduling Note:</strong> Tyler jobs are batched to a minimum of 2 per trip to keep the ~100-mile
+              run economical at current diesel prices. Contact us to coordinate scheduling.
+            </div>
+            <h4 style="margin-top:1.25rem">Areas Served</h4>
+            <div class="areas-grid">
+              {tylerAreas.map(area => <span class="area-tag">{area}</span>)}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Market Context -->
+  <section class="section section--alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Market Context</span>
+        <h2>Why This Territory</h2>
+        <p>Texas leads the nation in construction activity. The DFW–Tyler corridor sits at the centre of it.</p>
+      </div>
+      <div class="stats-row">
+        <div class="big-stat">
+          <div class="big-stat-value">$50.33B</div>
+          <div class="big-stat-label">Texas Construction Spending</div>
+          <div class="big-stat-note">Leads the nation (2025)</div>
+        </div>
+        <div class="big-stat">
+          <div class="big-stat-value">#2</div>
+          <div class="big-stat-label">DFW New Home Permit Volume</div>
+          <div class="big-stat-note">Nationally (2025)</div>
+        </div>
+        <div class="big-stat">
+          <div class="big-stat-value">#1</div>
+          <div class="big-stat-label">DFW Industrial Permits</div>
+          <div class="big-stat-note">~1/3 of Texas commercial sq ft</div>
+        </div>
+        <div class="big-stat">
+          <div class="big-stat-value">4.9%</div>
+          <div class="big-stat-label">Concrete Pump Market CAGR</div>
+          <div class="big-stat-note">Through 2035 (North America)</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-banner">
+    <div class="container">
+      <h2>In Our Service Area? Let's Talk.</h2>
+      <p>Contact us with your site address, pour volume, and schedule. We'll confirm coverage and get you a quote.</p>
+      <div class="btn-group">
+        <a href="/contact" class="btn btn-primary">Request a Quote</a>
+        <a href="tel:+14697044227" class="btn btn-outline">Call (469) 704-4227</a>
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+  .corridor-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  .corridor-text h2 {
+    color: var(--color-primary);
+    margin: 0.5rem 0 1rem;
+  }
+
+  .corridor-map {
+    background: var(--color-primary);
+    border-radius: var(--radius-lg);
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .corridor-node {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .node-dot {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: var(--color-accent);
+    flex-shrink: 0;
+  }
+
+  .node-label {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .node-label strong {
+    color: #fff;
+    font-size: 1rem;
+  }
+
+  .node-label span {
+    color: rgba(255,255,255,0.6);
+    font-size: 0.8rem;
+  }
+
+  .corridor-highway {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    padding-left: 0.5rem;
+  }
+
+  .corridor-highway::before {
+    content: '';
+    flex: 1;
+    height: 2px;
+    border-top: 2px dashed rgba(255,255,255,0.3);
+    margin-right: 0.5rem;
+  }
+
+  .corridor-highway span {
+    color: rgba(255,255,255,0.5);
+    font-size: 0.8rem;
+    white-space: nowrap;
+  }
+
+  .corridor-dist {
+    background: rgba(255,255,255,0.1);
+    padding: 0.2rem 0.6rem;
+    border-radius: 100px;
+  }
+
+  /* Market Cards */
+  .market-card {
+    background: var(--color-surface);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+  }
+
+  .market-card-header {
+    padding: 1.5rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .market-card-header--dfw {
+    background: var(--color-primary);
+    color: #fff;
+  }
+
+  .market-card-header--tyler {
+    background: #2a5885;
+    color: #fff;
+  }
+
+  .market-card-header h3 {
+    color: #fff;
+    font-size: 1.2rem;
+  }
+
+  .market-badge {
+    background: var(--color-accent);
+    color: #fff;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 0.25rem 0.7rem;
+    border-radius: 100px;
+  }
+
+  .market-card-body {
+    padding: 1.75rem 2rem;
+  }
+
+  .market-card-body p {
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+  }
+
+  .market-stats {
+    display: flex;
+    gap: 1.5rem;
+    margin: 1.25rem 0;
+  }
+
+  .mkt-stat {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mkt-stat-value {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--color-accent);
+    line-height: 1;
+  }
+
+  .mkt-stat-label {
+    font-size: 0.78rem;
+    color: var(--color-text-muted);
+    max-width: 150px;
+  }
+
+  .market-card-body h4 {
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+  }
+
+  .area-feature-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .area-feature-list li {
+    font-size: 0.88rem;
+    color: var(--color-text-muted);
+    display: flex;
+    gap: 0.4rem;
+  }
+
+  .area-feature-list li::before {
+    content: '→';
+    color: var(--color-accent);
+    flex-shrink: 0;
+  }
+
+  .tyler-note {
+    background: #fff8ed;
+    border-left: 3px solid var(--color-accent);
+    padding: 0.85rem 1rem;
+    border-radius: 0 var(--radius) var(--radius) 0;
+    font-size: 0.88rem;
+    color: var(--color-text-muted);
+    margin-top: 1rem;
+  }
+
+  .areas-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 0.5rem;
+  }
+
+  .area-tag {
+    background: #f0f4f8;
+    color: var(--color-primary);
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 0.25rem 0.65rem;
+    border-radius: 100px;
+  }
+
+  /* Big Stats */
+  .stats-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .big-stat {
+    text-align: center;
+    background: var(--color-surface);
+    border-radius: var(--radius-lg);
+    padding: 2rem 1.5rem;
+    box-shadow: var(--shadow);
+  }
+
+  .big-stat-value {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--color-accent);
+    line-height: 1;
+    margin-bottom: 0.4rem;
+  }
+
+  .big-stat-label {
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 0.25rem;
+  }
+
+  .big-stat-note {
+    font-size: 0.78rem;
+    color: var(--color-text-muted);
+  }
+
+  @media (max-width: 768px) {
+    .corridor-block { grid-template-columns: 1fr; }
+    .corridor-visual { display: none; }
+    .market-stats { flex-direction: column; gap: 0.75rem; }
+  }
+</style>

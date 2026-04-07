@@ -1,0 +1,199 @@
+---
+const navLinks = [
+  { href: '#services', label: 'Services' },
+  { href: '#about', label: 'About' },
+  { href: '#service-area', label: 'Service Area' },
+  { href: '#contact', label: 'Contact' },
+];
+---
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="/" class="logo">
+      <img src="/gordon-concrete-pumping/Screenshot_2026-03-10_171154-removebg-preview.png" alt="Gordon Concrete Pumping" class="logo-img" />
+      <span class="logo-text">
+        <strong>Gordon Concrete Pumping</strong>
+        <small>38-Meter Boom Pump | Dallas–Tyler, TX</small>
+      </span>
+    </a>
+
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="site-nav" id="site-nav">
+      <ul>
+        {navLinks.map(link => (
+          <li>
+            <a href={link.href} class="nav-link">{link.label}</a>
+          </li>
+        ))}
+      </ul>
+      <div class="nav-right">
+        <a href="https://www.facebook.com/people/Gordon-Concrete-Pumping/YOUR_PAGE_ID" target="_blank" rel="noopener noreferrer" class="fb-link" aria-label="Facebook">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+          </svg>
+        </a>
+        <a href="#contact" class="btn btn-primary nav-cta">Get a Quote</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const toggle = document.querySelector('.nav-toggle') as HTMLButtonElement;
+  const nav = document.getElementById('site-nav');
+
+  toggle?.addEventListener('click', () => {
+    const expanded = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', String(!expanded));
+    nav?.classList.toggle('open');
+  });
+
+  // Close nav on link click (mobile)
+  document.querySelectorAll('.nav-link, .nav-cta').forEach(link => {
+    link.addEventListener('click', () => {
+      nav?.classList.remove('open');
+      toggle?.setAttribute('aria-expanded', 'false');
+    });
+  });
+</script>
+
+<style>
+  .site-header {
+    background: var(--color-primary);
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.2);
+  }
+
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-top: 0.85rem;
+    padding-bottom: 0.85rem;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+    color: #fff;
+    flex-shrink: 0;
+  }
+
+  .logo:hover { text-decoration: none; }
+
+  .logo-img {
+    height: 44px;
+    width: auto;
+    flex-shrink: 0;
+  }
+
+  .logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+  }
+
+  .logo-text strong { font-size: 1rem; font-weight: 700; }
+  .logo-text small { font-size: 0.7rem; opacity: 0.75; font-weight: 400; }
+
+  .site-nav {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  .site-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 0.125rem;
+    margin: 0;
+  }
+
+  .nav-link {
+    display: block;
+    padding: 0.45rem 0.7rem;
+    color: rgba(255,255,255,0.85);
+    font-size: 0.9rem;
+    font-weight: 500;
+    border-radius: var(--radius);
+    transition: background 0.15s, color 0.15s;
+    text-decoration: none;
+  }
+
+  .nav-link:hover { background: rgba(255,255,255,0.12); color: #fff; text-decoration: none; }
+
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-left: 0.75rem;
+  }
+
+  .fb-link {
+    color: rgba(255,255,255,0.75);
+    display: flex;
+    align-items: center;
+    transition: color 0.15s;
+  }
+
+  .fb-link:hover { color: #fff; text-decoration: none; }
+
+  .nav-cta { padding: 0.5rem 1.25rem; font-size: 0.9rem; }
+
+  .nav-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+  }
+
+  .nav-toggle span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: #fff;
+    border-radius: 2px;
+  }
+
+  @media (max-width: 860px) {
+    .nav-toggle { display: flex; }
+
+    .site-nav {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: var(--color-primary-dark);
+      flex-direction: column;
+      align-items: stretch;
+      padding: 1rem 1.5rem 1.5rem;
+      gap: 0.5rem;
+    }
+
+    .site-nav.open { display: flex; }
+    .site-nav ul { flex-direction: column; gap: 0; }
+    .nav-link { font-size: 1rem; padding: 0.65rem 0.75rem; }
+
+    .nav-right {
+      margin-left: 0;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-top: 0.5rem;
+    }
+
+    .nav-cta { text-align: center; flex: 1; }
+  }
+</style>
