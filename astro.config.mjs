@@ -4,6 +4,6 @@ import { defineConfig } from 'astro/config';
 // site = your full GitHub Pages URL (e.g. https://yourusername.github.io)
 // base = your repository name (e.g. /jg-concrete-pumping)
 export default defineConfig({
-  site: 'https://jakordon.github.io',
-  base: '/JG-Concrete-Pumping',
+  site: 'https://jgconcretepumping.com',
+  base: '/',
 });
