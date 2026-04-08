@@ -1,6 +1,6 @@
-# Gordon Concrete Pumping — Website
+# JG Concrete Pumping — Website
 
-Astro website for Gordon Concrete Pumping. Built with [Astro](https://astro.build), deployed via GitHub Pages.
+Astro website for JG Concrete Pumping. Built with [Astro](https://astro.build), deployed via GitHub Pages.
 
 ---
 
@@ -48,14 +48,14 @@ If you don't have one, go to [github.com](https://github.com) and sign up. It's 
 1. Log into GitHub
 2. Click the **+** icon in the top-right corner → **New repository**
 3. Fill in:
-   - **Repository name**: `gordon-concrete-pumping` (or whatever you prefer — no spaces)
-   - **Description**: Gordon Concrete Pumping website
+   - **Repository name**: `jg-concrete-pumping` (or whatever you prefer — no spaces)
+   - **Description**: JG Concrete Pumping website
    - **Public** (required for free GitHub Pages)
    - Do **NOT** check "Add a README file" (we already have one)
 4. Click **Create repository**
 5. **Copy your repository URL** — it will look like:
    ```
-   https://github.com/yourusername/gordon-concrete-pumping.git
+   https://github.com/yourusername/jg-concrete-pumping.git
    ```
 
 ---
@@ -69,15 +69,15 @@ Open the file `astro.config.mjs` in this folder and update:
 ```js
 export default defineConfig({
   site: 'https://yourusername.github.io',       // ← replace with your GitHub username
-  base: '/gordon-concrete-pumping',              // ← replace with your repo name
+  base: '/jg-concrete-pumping',              // ← replace with your repo name
 });
 ```
 
-For example, if your GitHub username is `johndoe` and repo is `gordon-concrete-pumping`:
+For example, if your GitHub username is `johndoe` and repo is `jg-concrete-pumping`:
 ```js
 export default defineConfig({
   site: 'https://johndoe.github.io',
-  base: '/gordon-concrete-pumping',
+  base: '/jg-concrete-pumping',
 });
 ```
 
@@ -119,7 +119,7 @@ What this does:
 Run these commands (replace with your actual GitHub URL from Step 2):
 
 ```bash
-git remote add origin https://github.com/yourusername/gordon-concrete-pumping.git
+git remote add origin https://github.com/yourusername/jg-concrete-pumping.git
 git branch -M main
 git push -u origin main
 ```
@@ -135,7 +135,7 @@ You'll be asked to log in to GitHub. Use your username and password, or set up a
 
 ### Step 7 — Enable GitHub Pages
 
-1. Go to your repository on GitHub: `https://github.com/yourusername/gordon-concrete-pumping`
+1. Go to your repository on GitHub: `https://github.com/yourusername/jg-concrete-pumping`
 2. Click **Settings** (top tab row)
 3. In the left sidebar, click **Pages**
 4. Under **Build and deployment** → **Source**, select **GitHub Actions**
@@ -151,7 +151,7 @@ You'll be asked to log in to GitHub. Use your username and password, or set up a
 
 Your site will be live at:
 ```
-https://yourusername.github.io/gordon-concrete-pumping
+https://yourusername.github.io/jg-concrete-pumping
 ```
 
 ---
